@@ -1,0 +1,20 @@
+test:vulnerabilities:my-sub-project:
+    stage: test
+    image:
+        name: debricked/debricked-scan
+        entrypoint: ["/gitlab-ci.sh"]
+    script: echo "Done"
+    variables:
+        DEBRICKED_TOKEN: $DEBRICKED_TOKEN
+        REPOSITORY: repo-name/my-sub-project
+        
+test:vulnerabilities:another-sub-project:
+    stage: test
+    image:
+        name: debricked/debricked-scan
+        entrypoint: ["/gitlab-ci.sh"]
+    script: echo "Done"
+    variables:
+        DEBRICKED_TOKEN: $DEBRICKED_TOKEN
+        REPOSITORY: repo-name/another-sub-project
+
